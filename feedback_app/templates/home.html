@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+<script>$(".btn-group button").removeClass("active");
+</script>
+{%block body%}
+<h3 style="text-align: center;">Your feedback is valuable to us.</h3>
+    <h3 style="text-align: center;">Kindly take a second to rate your check-in experience.</h3>
+
+<form action="/" class="form" method="POST">
+<fieldset>
+  <input type="radio" name="satisfaction" class="sr-only" id="happy" value="happy">
+  <label for="happy">
+    <img src="../static/imgs/green.png" alt="happy" class="img-fluid" alt="Responsive image" height = 90px width = 90px>
+  </label>
+
+  <input type="radio" name="satisfaction" class="sr-only" id="neutral" value="neutral">
+  <label for="neutral">
+    <img src="../static/imgs/yellow.png" alt="neutral" class="img-responsive" alt="Responsive image" height = 90px width = 90px>
+  </label>
+
+  <input type="radio" name="satisfaction" class="sr-only" id="sad" value="sad">
+  <label for="sad">
+    <img src="../static/imgs/red.png" alt="sad" class="img-fluid" alt="Responsive image" height = 90px width = 90px>
+  </label>
+</fieldset>
+    
+    <div class="form-group">
+        <br>
+        <label for="suggestions">
+            
+        </label>
+        <h3 style="text-align: center;">Feedback or suggestions</h3>
+        <textarea class="form-control" id="suggestions" name="suggestions" rows="2"></textarea>
+    </div>
+    <br>
+    <div class = "buttonHolder">
+    <button type="submit" class="btn btn-success">
+        <img src="../static/imgs/submit.png" height="25" width="30">
+    </button>
+    </div>
+  </form>
+
+{%endblock body%}
+
